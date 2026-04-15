@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GM Airconditioning Services</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <h1 class="logo">GM Airconditioning</h1>
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="burger" id="burger">☰</div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Stay Cool with <span>GM Airconditioning Services</span></h1>
+    <p>Your trusted partner for installation, cleaning, and repair.</p>
+    <a href="#contact" class="btn">Contact Us</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <h2>About Our Company</h2>
+  <p>
+    GM Airconditioning Services is a reliable provider of aircon solutions for homes and businesses. 
+    We specialize in installation, repair, and maintenance with high-quality service and customer satisfaction.
+    <br><br>
+    ✅ We are a <strong>BIR REGISTERED</strong> business, ensuring legitimacy and trustworthiness.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+  <h2>Our Services</h2>
+  <div class="service-grid">
+
+    <div class="service-card" onclick="openModal('Installation','https://images.unsplash.com/photo-1581578731548-c64695cc6952')">
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
+      <h3>Installation</h3>
+    </div>
+
+    <div class="service-card" onclick="openModal('Cleaning','https://images.unsplash.com/photo-1603791440384-56cd371ee9a7')">
+      <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7">
+      <h3>Cleaning</h3>
+    </div>
+
+    <div class="service-card" onclick="openModal('Repair','https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc')">
+      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc">
+      <h3>Repair</h3>
+    </div>
+
+    <div class="service-card" onclick="openModal('Freon Charging','https://images.unsplash.com/photo-1581092335397-9583eb92d232')">
+      <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232">
+      <h3>Freon Charging</h3>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>📞 Phone: <a href="tel:0999 918 2179">+63 999 918 2179</a></p>
+  <p>📧 Email: <a href="mailto:gmairconditionings@gmail.com">gmairconditionings@gmail.com</a></p>
+  <p>📍 Location: Philippines</p>
+  <a href="https://www.facebook.com/profile.php?id=61550760317596" class="btn">Visit Facebook</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 GM Airconditioning Services</p>
+</footer>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <img id="modalImg">
+  </div>
+</div>
+
+<script>
+const burger=document.getElementById('burger');
+const nav=document.getElementById('nav-menu');
+
+burger.addEventListener('click',()=>nav.classList.toggle('active'));
+
+function openModal(title,img){
+ document.getElementById('modalTitle').innerText=title;
+ document.getElementById('modalImg').src=img;
+ document.getElementById('modal').classList.add('show');
+}
+
+function closeModal(){
+ document.getElementById('modal').classList.remove('show');
+}
+</script>
+</body>
+</html>
