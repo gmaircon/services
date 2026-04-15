@@ -1,0 +1,156 @@
+/* ================= STYLE.CSS ================= */
+
+body{font-family:Poppins;background:#0f172a;color:white;margin:0}
+
+.navbar{display:flex;justify-content:space-between;padding:15px;background:#0f172a;position:sticky;top:0}
+nav ul{display:flex;gap:20px;list-style:none}
+nav a{color:white;text-decoration:none}
+.burger{display:none}
+
+.hero{height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://images.unsplash.com/photo-1581091012184-5c6f2c9b2c57');background-size:cover}
+.hero span{color:#38bdf8}
+
+.btn{display:inline-block;margin-top:15px;padding:10px 20px;background:#38bdf8;color:white;text-decoration:none;border-radius:5px}
+
+.about, .services, .contact{padding:60px;text-align:center}
+
+.service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.service-card{background:#1e293b;border-radius:10px;overflow:hidden;cursor:pointer;transition:.3s}
+.service-card img{width:100%;height:150px;object-fit:cover}
+.service-card:hover{transform:scale(1.05)}
+
+.modal{display:none;position:fixed;width:100%;height:100%;background:rgba(0,0,0,0.8)}
+.modal.show{display:flex;justify-content:center;align-items:center}
+.modal-content{background:white;color:black;padding:20px;border-radius:10px;max-width:500px;width:90%;margin:0 20px;position:relative;max-height:80vh;overflow:auto;}
+.modal-content img{width:100%;margin-top:10px;max-height:300px;object-fit:cover;border-radius:8px;}
+
+.close{position:absolute;top:10px;right:15px;font-size:28px;cursor:pointer;font-weight:bold;}
+
+@media(max-width:768px){nav{display:none}nav.active{display:block}.burger{display:block}}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #0f172a;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url('https://images.unsplash.com/photo-1581091012184-5c6f2c9b2c57');
+  background-size: cover;
+}
+
+.hero span {
+  color: #38bdf8;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* SECTIONS */
+.about, .services, .contact {
+  padding: 60px;
+  text-align: center;
+}
+
+/* SERVICES */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.service-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+/* MODAL (PURE CSS) */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+}
+
+.modal:target {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal-content img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.close {
+  float: right;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #1e293b;
+}
